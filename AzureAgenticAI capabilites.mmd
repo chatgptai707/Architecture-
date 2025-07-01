@@ -1,0 +1,76 @@
+ flowchart TD
+    subgraph DataSources[Data Sources]
+        A1(Enterprise Data)
+        A2(External Data)
+        A3(Real-Time Data)
+    end
+
+    subgraph DataIngestion[Data Ingestion & Storage]
+        B1(Azure Data Factory)
+        B2(Azure Event Hubs)
+        B3(Azure Synapse Analytics)
+        B4(Azure Blob Storage)
+    end
+
+    subgraph Knowledge[Knowledge & Semantic Layer]
+        C1(Azure Cognitive Search)
+        C2(Azure OpenAI Embeddings)
+        C3(Azure Cosmos DB)
+    end
+
+    subgraph AgentOrchestration[Agentic AI Orchestration]
+        D1(Azure AI Studio / Prompt Flow)
+        D2(Azure Logic Apps)
+        D3(Azure Functions)
+        D4(Azure Container Apps)
+    end
+
+    subgraph Models[Large Language Models]
+        E1(Azure OpenAI GPT-4o)
+        E2(Custom Fine-tuned Models)
+    end
+
+    subgraph Tools[Tools & Plugins]
+        F1(Cognitive Services)
+        F2(API Connectors)
+        F3(Action Plugins)
+    end
+
+    subgraph Experience[Experience Layer]
+        G1(Bot Framework)
+        G2(App Service)
+        G3(Power Platform)
+    end
+
+    subgraph Monitoring[Monitoring & Governance]
+        H1(Azure Monitor)
+        H2(Azure Policy)
+        H3(API Management)
+        H4(Responsible AI Toolkits)
+    end
+
+    %% Connections
+    A1 --> B1
+    A2 --> B1
+    A3 --> B2
+    B1 --> C1
+    B2 --> C1
+    B3 --> C2
+    B4 --> C3
+    C1 --> D1
+    C2 --> D1
+    C3 --> D1
+    D1 --> E1
+    D1 --> E2
+    E1 --> F1
+    E1 --> F2
+    E2 --> F2
+    F1 --> G1
+    F2 --> G2
+    F3 --> G3
+    G1 --> H1
+    G2 --> H1
+    G3 --> H1
+    H1 --> H2
+    H1 --> H3
+    H1 --> H4
